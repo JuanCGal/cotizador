@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es-co">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Cotizador Eventos Lei</h1>
+            <div id="formulario" class="principal">
+                <div class="principal__cotizador">
+
+                    <h2 class="principal__cotizador__h2">Tipos de bombas y adornos</h2>
+
+                    <div class="principal__cotizador__botones">
+
+                        <div class="principal__cotizador__botones__tipo">
+
+                            <div class="inputs__label">
+                                <label for="producto">Producto</label>
+                                <input name="elemento" id="producto" class="principal__cotizador__botones__tipo__titulo inputs" placeholder="Escribe el producto"></input>
+                            </div>
+
+                            <div class="inputs__label">
+                                <label for="tamanio">Tamaño</label>
+                                <input name="tamanio" id="tamanio" class="principal__cotizador__botones__tipo__titulo inputs" placeholder="Escribe el tamaño o diseño"></input>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="principal__cotizador__botones__tipo">
+                            <botton id="reflex" class="principal__cotizador__botones__tipo__titulo">Reflex</botton>
+                             <div>
+                                <button class="principal__cotizador__botones__tipo__boton">R5</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R12</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R18</button>
+                                <button class="principal__cotizador__botones__tipo__boton">260</button>
+                            </div> 
+                        </div>
+
+                        <div class="principal__cotizador__botones__tipo">
+                            <botton id="satin" class="principal__cotizador__botones__tipo__titulo">Satín</botton>
+                             <div>
+                                <button class="principal__cotizador__botones__tipo__boton">R5</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R12</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R18</button>
+                                <button class="principal__cotizador__botones__tipo__boton">260</button>
+                            </div> 
+                        </div>
+                        
+                        <div class="principal__cotizador__botones__tipo">
+                            <botton id="dusk" class="principal__cotizador__botones__tipo__titulo">Dusk</botton>
+                             <div>
+                                <button class="principal__cotizador__botones__tipo__boton">R5</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R12</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R18</button>
+                                <button class="principal__cotizador__botones__tipo__boton">260</button>
+                            </div> 
+                        </div>
+                        
+                        <div class="principal__cotizador__botones__tipo">
+                            <botton id="metal" class="principal__cotizador__botones__tipo__titulo">Metal</botton>
+                             <div>
+                                <button class="principal__cotizador__botones__tipo__boton">R5</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R12</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R18</button>
+                                <button class="principal__cotizador__botones__tipo__boton">260</button>
+                            </div> 
+                        </div>
+                    
+                        <div class="principal__cotizador__botones__tipo">
+                            <botton id="burbuja" class="principal__cotizador__botones__tipo__titulo">Burbuja</botton>
+                             <div>
+                                <button class="principal__cotizador__botones__tipo__boton">R13</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R20</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R24</button>
+                                <button class="principal__cotizador__botones__tipo__boton">R36</button>
+                            </div> 
+                        </div>
+                    
+                        <div class="principal__cotizador__botones__tipo">
+                            <botton id="formas" class="principal__cotizador__botones__tipo__titulo">Formas</botton>
+                            <div>
+                                <button class="principal__cotizador__botones__tipo__boton">Corazón</button>
+                                <button class="principal__cotizador__botones__tipo__boton">Estrella</button>
+                                <button class="principal__cotizador__botones__tipo__boton">Número</button>
+                                <button class="principal__cotizador__botones__tipo__boton">Mensaje</button>
+                            </div>
+                        </div>
+                        
+                       
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="principal__cotizador">
+                    <h2 class="principal__cotizador__h2">Valor y cantidad</h2>
+                    
+                    <div class="principal__cotizador__botones__tipo">
+                        <div class="inputs__label">
+                            <label for="valor">Valor Unidad</label>
+                            <input id="valor" type="number" class="principal__cotizador__inputs inputs" placeholder="Escribe el valor por unidad">
+                        </div>
+                        
+                        <div class="inputs__label">
+                            <label for="cantidad">Cantidad</label>
+                            <input id="cantidad" type="number" class="principal__cotizador__inputs inputs" placeholder="Escribe la cantidad">
+                        </div>
+                    </div>
+                    <button id="agregar" class="agregar" type="button" onclick="agregarProducto();" disabled>Agregar</button>
+                    <div class="total">
+                        <span class="titulo__total">Total</span>
+                        <span id="totalizar" class="agregar" type="button" onclick="totalizar();">$ 0</span>
+                    </div>
+                </div>
+    
+                <div class="visualizador">
+                    <h2>Visualizador</h2>
+                    <div class="visualizador__cotizacion">
+                        
+                        <table id="tabla" class="tabla">
+                            <thead>
+                                <tr>
+                                    <th id="elemento">Elemento</th>
+                                    <th id="tamanio">Tamaño</th>
+                                    <th id="valorUnit">Valor</th>
+                                    <th id="cantidades">Cantidad</th>
+                                    <th id="subtotal">subtotal</th>
+                                    <th>Borrar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+        
+        <script src="scripts.js"></script>
+    </body>
+</html>
